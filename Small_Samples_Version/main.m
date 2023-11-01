@@ -26,9 +26,9 @@ L0 = normalizedLaplacian(L0);
 
 [Y,obj,Hstar] = one_step(HP,numClust,r1Temp,r2Temp,M);
 
- [res_label, ~, ~, ~] = kmeans(Hstar,numClust,'maxiter',100,'replicates',50,'emptyaction','singleton');
+ % [res_label, ~, ~, ~] = kmeans(Hstar,numClust,'maxiter',100,'replicates',50,'emptyaction','singleton');
  
-% [~,res_label] = max(Y,[],2);
+[~,res_label] = max(Y,[],2);
 res = zeros(2, 8);
 res(1,:) = Clustering8Measure(gt, res_label);
 end
