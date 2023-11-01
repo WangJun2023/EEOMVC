@@ -4,11 +4,11 @@ view_num = length(HP);
 maxIter = 100;
 Q = eye(clus_num,clus_num);
 
-Ik = eye(clus_num);
-randorder = randperm(size(Ik,1));
-numceil = ceil(sample_num/clus_num);
-largeY = repmat(Ik(randorder,:),numceil,1);
-Y = largeY(1:sample_num,:); 
+% Ik = eye(clus_num);
+% randorder = randperm(size(Ik,1));
+% numceil = ceil(sample_num/clus_num);
+% largeY = repmat(Ik(randorder,:),numceil,1);
+% Y = largeY(1:sample_num,:); 
 
 
 stream = RandStream.getGlobalStream;
