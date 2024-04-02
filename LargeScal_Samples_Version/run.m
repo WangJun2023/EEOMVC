@@ -16,9 +16,8 @@ for dataIndex = 1
     load(dataName);
     numClust = length(unique(gt));
     
-    if dataIndex ~= 2
-        [fea] = NormalizeData(fea);
-    end
+    [fea] = NormalizeData(fea);
+
     
     ResBest = zeros(1, 8);
     ResStd = zeros(1, 8);
